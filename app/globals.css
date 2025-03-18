@@ -1,0 +1,138 @@
+/* Custom CSS for viewport height on mobile */
+:root {
+  --vh: 1vh;
+}
+
+/* Use the custom viewport height variable */
+.min-h-screen {
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Hide scrollbars but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 767px) {
+  button,
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Fix for iOS input zoom */
+@media screen and (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Prevent content shift when scrollbar appears */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Improve focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #1a3c86;
+  outline-offset: 2px;
+}
+
+/* Prevent iOS highlighting */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improved responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Better responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive tables */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Improved form elements on mobile */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    width: 100%;
+  }
+
+  button {
+    touch-action: manipulation;
+  }
+}
+
+/* Fix for iOS 100vh issue */
+.h-screen {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Prevent content jumping when scrollbar appears/disappears */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Improved focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #1a3c86;
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on interactive elements */
+button,
+a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

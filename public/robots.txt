@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://b2b.linknb.ca/sitemap.xml
+
